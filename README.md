@@ -5,8 +5,8 @@
 **Grupo**:
 <!-- no máximo 5 alunos -->
 
-1. 10420398 - Isabella Sofia Martins - desenvolvimento back/front + configurações AWS
-1. 10420574 - Jennifer Tondade - documentações 
+1. 10420398 - Isabella Sofia Martins - desenvolvimentos back/front + configurações AWS + documentações
+1. 10420574 - Jennifer Tondade - desenvolvimentos back/front + configurações AWS + documentações 
 
 
 ## 1. Visão geral
