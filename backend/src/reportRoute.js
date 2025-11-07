@@ -1,6 +1,6 @@
 
 import express from "express";
-import { handler } from "../handler.js"; //lambda
+import { handler } from "./handler.js"; //lambda
 
 const router = express.Router();
 
