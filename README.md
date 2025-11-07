@@ -14,8 +14,11 @@ O domínio escolhido foi a "Prateleira Virtual", uma aplicação simples desenvo
 Nessa aplicação é possivel criar um card com as informações do novo livro, editar, deletar e passar o livro com leitura pendente para a lista de livros lidos.
 
 ## 2. Arquitetura
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/0b853ae9-a9fd-439b-9f20-ec035bf9f6de" width="600" alt="Diagrama da Arquitetura">
+</p>
 
-![Diagrama](docs/arquitetura.png)
+<br/>
 
 | Camada | Serviço | Descrição |
 |--------|---------|-----------|
@@ -28,6 +31,26 @@ Nessa aplicação é possivel criar um card com as informações do novo livro, 
 ## 3. Como rodar localmente
 
 ```bash
-cp .env.example .env         # configure variáveis
-docker compose up --build
-# API em http://localhost:3000
+#1. Backend
+cd projeto2/backend
+npm install  # todas as dependencias do node
+node src/index.js  # backend em http://localhost:3001/books
+
+#2. Frontend
+cd projeto2/frontend
+npm install
+npm start
+
+#3. Lambda
+cd projeto2/backend/src
+node handler.js
+
+#4. Conteinerizar
+docker build -t books-api . #img do docker
+docker run -d -p 3001:3001 --name books-api-container books-api
+docker ps
+#testar API em http://localhost:3001
+
+#5. Lambda local com backend Docker
+node src/handler.js #roda lambda local
+const response = await fetch("http://localhost:3001/books"); #faz fetch para API local - deve retornar JSON com estatísticas
