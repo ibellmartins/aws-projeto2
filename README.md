@@ -14,8 +14,11 @@ O domínio escolhido foi a "Prateleira Virtual", uma aplicação simples desenvo
 Nessa aplicação é possivel criar um card com as informações do novo livro, editar, deletar e passar o livro com leitura pendente para a lista de livros lidos.
 
 ## 2. Arquitetura
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/0b853ae9-a9fd-439b-9f20-ec035bf9f6de" width="600" alt="Diagrama da Arquitetura">
+</p>
 
-![Diagrama](https://github.com/user-attachments/assets/0b853ae9-a9fd-439b-9f20-ec035bf9f6de)
+<br/>
 
 | Camada | Serviço | Descrição |
 |--------|---------|-----------|
