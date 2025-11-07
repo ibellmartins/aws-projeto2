@@ -36,6 +36,7 @@ app.delete("/books/:id", (req, res) => {
   res.status(204).end();
 });
 
+app.use(reportRouter);
+
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
-app.use(reportRouter);

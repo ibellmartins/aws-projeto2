@@ -26,6 +26,8 @@ export const handler = async () => {
   }
 };
 
+/*
   handler()
     .then(result => console.log(result))
     .catch(console.error);
+*/
