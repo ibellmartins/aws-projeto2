@@ -1,0 +1,266 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.app-container {
+  background-color: #ffffff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  width: 850px;
+  max-width: 95%;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #22526c;
+  margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 15px;
+    color: #22526c;
+}
+
+h4 {
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+input {
+  padding: 12px 16px;
+  border: 1px solid #ced4da;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #22526c;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 119, 182, 0.25);
+}
+
+button {
+  background-color: #22526c;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #005f8a;
+  transform: translateY(-2px);
+}
+
+/* ===== Lista de livros ===== */
+.book-list-container {
+  text-align: center;
+}
+
+.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.book-card {
+  background-color: #f1f3f5;
+  padding: 20px;
+  border-radius: 16px;
+  width: 240px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.book-card h3 {
+  font-size: 1.3rem;
+  color: #22526c;;
+  margin-bottom: 5px;
+}
+
+.book-card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 3px 0;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card-buttons button {
+  flex: 1;
+  padding: 8px 0;
+  font-size: 0.95rem;
+  border-radius: 10px;
+}
+
+.card-buttons .edit {
+  background-color: #1e3342;
+}
+
+.card-buttons .edit:hover {
+  background-color: #1e3342;
+}
+
+.card-buttons .delete {
+  background-color: #ff5555;
+}
+
+.card-buttons .delete:hover {
+  background-color: #e04444;
+}
+
+.card-buttons .read {
+  background-color: #2ecc71;
+}
+
+.card-buttons .read.active {
+  background-color: #27ae60;
+}
+
+/* ===== Edit form ===== */
+.edit-form input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.edit-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.edit-actions button {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.edit-actions button[type="submit"] {
+  background: #2ecc71;
+}
+
+.edit-actions button[type="button"] {
+  background: #999;
+}
+
+.empty-msg {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  margin-top: 40px;
+}
+
+
+.header-image {
+  width: 200px;
+  max-width: 60%;
+  margin: 10px auto 30px;
+  display: block;
+  animation: fadeIn 1s ease-in-out;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.header-image:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.footer {
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 1px solid #dcdcdc;
+  color: #555;
+  font-size: 0.95rem;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.footer p {
+  margin: 0;
+  font-weight: 300;
+}
+
+.footer strong {
+  color: #22526c;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 0.85rem;
+    margin-top: 40px;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 30px 20px;
+  }
+  .book-grid {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .book-card {
+    width: 100%;
+  }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
