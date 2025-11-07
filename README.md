@@ -38,11 +38,9 @@ cd projeto2/frontend
 npm install
 npm start
 
-
 #3. Lambda
 cd projeto2/backend/src
 node handler.js
-
 
 #4. Conteinerizar
 docker build -t books-api . #img do docker
@@ -50,9 +48,6 @@ docker run -d -p 3001:3001 --name books-api-container books-api
 docker ps
 #testar API em http://localhost:3001
 
-
 #5. Lambda local com backend Docker
 node src/handler.js #roda lambda local
 const response = await fetch("http://localhost:3001/books"); #faz fetch para API local - deve retornar JSON com estatísticas
-
-
