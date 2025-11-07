@@ -1,6 +1,7 @@
 
 import express from "express";
 import cors from "cors";
+import reportRouter from "./reportRoute.js";
 
 const app = express();
 app.use(cors());
@@ -36,4 +37,5 @@ app.delete("/books/:id", (req, res) => {
 });
 
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log(`Servidor mock rodando na porta ${PORT}`));
+app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
+app.use(reportRouter);
