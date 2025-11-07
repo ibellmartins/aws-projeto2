@@ -15,7 +15,7 @@ Nessa aplicação é possivel criar um card com as informações do novo livro, 
 
 ## 2. Arquitetura
 
-![Diagrama](docs/arquitetura.png)
+![Diagrama](https://github.com/user-attachments/assets/0b853ae9-a9fd-439b-9f20-ec035bf9f6de)
 
 | Camada | Serviço | Descrição |
 |--------|---------|-----------|
